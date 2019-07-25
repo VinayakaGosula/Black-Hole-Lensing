@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Black Hole</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+       
+        
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <script src="js-libs/jquery-2.1.4.min.js"></script>
+        <script src="js-libs/three.min.js"></script>
+        <script src="js-libs/OrbitControls.js"></script>
+        <script src="js-libs/Detector.js"></script>
+        <script src="js-libs/stats.min.js"></script>
+        <script src="js-libs/ShaderLoader.min.js"></script>
+        <script src="js-libs/mustache.min.js"></script>
+        <script src="js-libs/dat.gui.min.js"></script>
+        <script src="three-js-monkey-patch.js"></script>
+
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            void main()    {
+                gl_Position = vec4( position, 1.0 );
+            }
+        </script>
+        <script data-src="raytracer.glsl" data-name="raytracer" type="x-shader/x-fragment"></script>
+        <script src="main.js"></script>
+
+    </body>
+</html>
